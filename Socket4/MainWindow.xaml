@@ -7,18 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="341" Width="330">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="179*"/>
-            <RowDefinition Height="146*"/>
-        </Grid.RowDefinitions>
-        <ListBox x:Name="lst" Margin="168,51,22,17" Foreground="#FF040404" Grid.RowSpan="2"/>
+        <ListBox x:Name="lst" Margin="168,51,0,17" Foreground="#FF040404" HorizontalAlignment="Left" Width="140"/>
         <TextBox x:Name="txtIndirizzo" HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="Black"/>
-        <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Margin="10,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
-        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Margin="10,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Margin="10,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="BtnInvia" Content="Invia" HorizontalAlignment="Left" Margin="168,18,0,0" VerticalAlignment="Top" Width="132" Click="BtnInvia_Click" Background="#FFDC7E30"/>
         <Label Content=" Inserire indirizzo ip" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="120" Background="#FFDC7E30"/>
         <Label Content=" Inserire Porta" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Width="120" Background="#FFDC7E30"/>
-        <Label Content="Inserire messaggio" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="120" Background="#FFDC7E30" Grid.Row="1"/>
+        <Label Content="Inserire messaggio" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" Width="120" Background="#FFDC7E30"/>
 
     </Grid>
 </Window>
