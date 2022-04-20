@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;  //
 using System.Net;        //
-using System.Windows.Threading; // 
+using System.Windows.Threading; //Utilizzato per i timer 
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -62,12 +62,12 @@ namespace Socket4
             if ((nBytes = socket.Available) > 0) // il > 0 non è obbligatorio
             {
                 //Ricezione dei caratteri in Attesa
-                byte[] buffer = new byte[nBytes];
-                EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0);
-                nBytes = socket.ReceiveFrom(buffer, ref remoteEndPoint);
-                string from = ((IPEndPoint)remoteEndPoint).Address.ToString();
+                byte[] buffer = new byte[nBytes]; //Array in byte
+                EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0); //Creo il point 
+                nBytes = socket.ReceiveFrom(buffer, ref remoteEndPoint);// Metodo che riceve i byte e li mette dentro il buffer
+                string from = ((IPEndPoint)remoteEndPoint).Address.ToString(); //Trasfroma l'ip dell'utente in una stringa
 
-                string message = Encoding.UTF8.GetString(buffer, 0, nBytes);
+                string message = Encoding.UTF8.GetString(buffer, 0, nBytes); //Messaggio codificato in UTF-8
                 lst.Items.Add(
                     from + ": " + message
                     );
